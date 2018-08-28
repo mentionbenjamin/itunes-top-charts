@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import TopChartsContainer from './containers/TopChartsContainer.js';
+import TopChartsContainer from './container/TopChartsContainer.js';
 import './App.css';
 
 class App extends Component {

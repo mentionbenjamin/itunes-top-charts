@@ -19,7 +19,7 @@ class TopChartsContainer extends React.Component {
        return res.json();
      })
      .then((data) => {
-       this.setState({ song: data});
+       this.setState({ song: data.feed.entry});
        console.log(data);
      })
   }
@@ -35,14 +35,12 @@ class TopChartsContainer extends React.Component {
         <h2>Itunes</h2>
         <TopChartsList
           song={this.state.song}
-          onCharacterSelected={this.handleSongSelected}
+          onSongSelected={this.handleSongSelected}
         />
         <TopChartsListItem selectedSong={this.state.selectedSong} />
       </div>
     );
   }
-
-
 }
 
 export default TopChartsContainer;
